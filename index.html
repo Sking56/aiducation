@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <link rel='stylesheet' href='/styles.scss'>
+  <script type="module" src="./main.js"></script>
+  <title>AI-ducation</title>
+</head>
+
+<body>
+  <nav class="navbar navbar-dark">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">
+        <!-- <img src="" alt="Logo" width="30" height="24" class="d-inline-block align-text-top"> -->
+        <h1>AIducation</h1>
+      </a>
+    </div>
+  </nav>
+  <!-- <div>
+    <header>
+      <h1>AIducation</h1>
+    </header>
+  </div> -->
+  <main>
+    <form class="row  g-2 justify-content-sm-around ">
+        <div class="col-sm ">
+          <select class="form-select text-center" id="gradeSelect">
+            <option selected>Grade Level</option>
+            <option value="1">First</option>
+            <option value="2">Second</option>
+            <option value="3">Third</option>
+            <option value="4">Fourth</option>
+            <option value="5">Fifth</option>
+            <option value="6">K</option>
+          </select>
+        </div>
+        <div class="col-sm">
+          <select class="form-select text-center" id="typeSelect">
+            <option selected>Type</option>
+            <option value="1">Addition</option>
+            <option value="2">Subtraction</option>
+            <option value="3">Multiplication</option>
+            <option value="3">Division</option>
+          </select>
+        </div>
+        
+    </form>
+    <form class="row  g-2 justify-content-sm-around ">
+      <div class="col-sm">
+        <div class="form-check form-switch" id="wholeSelect" checked>
+          <input class="form-check-input" type="checkbox" role="switch" id="wholeSelectSwitch">
+          <label class="form-check-label" for="flexSwitchCheckDefault"> Whole </label>
+        </div>
+      </div>
+      <div class="col-sm">
+        <div class="form-check form-switch" id="fractionSelect">
+          <input class="form-check-input" type="checkbox" role="switch" id="fractionSelectSwitch">
+          <label class="form-check-label" for="flexSwitchCheckDefault"> Fractions </label>
+        </div>
+      </div>
+      <div class="col-sm">
+        <div class="form-check form-switch" id="decimalSelect">
+          <input class="form-check-input" type="checkbox" role="switch" id="decimalSelectSwitch">
+          <label class="form-check-label" for="flexSwitchCheckDefault"> Decimals </label>
+        </div>
+      </div>
+    </form>
+
+    <div class="row text-center" id="generateButtonDiv">
+      <button type="submit" id="generateButton">Generate</button>
+    </div> 
+    <!-- TODO: Add a generate button for when the grade level and problem type is chosen -->
+    
+
+
+
+    <!-- Prompt box change to answer box and submit checks if answer is valid and correct -->
+    <form>
+      <div class="answer-box">
+        <label>
+          <input name="answer" placeholder="Enter instructions here" type="text"
+            value="Provide a recipe for the baked goods in the image" id="answerInput">
+        </label>
+        <button type="submit" id="submitButton">Submit</button>
+      </div>
+    </form>
+    <p class="output">(Results will appear here)</p>
+  </main>
+
+  <script type="module" src="/main.js"></script>
+</body>
+
+</html>
+
