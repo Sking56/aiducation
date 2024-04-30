@@ -39,61 +39,45 @@
             <option selected>Grade Level</option>
             <option value="1">First</option>
             <option value="2">Second</option>
-            <option value="3">Third</option>
-            <option value="4">Fourth</option>
+            <option value="2">Third</option>
+            <option value="3">Fourth</option>
             <option value="5">Fifth</option>
-            <option value="6">K</option>
+            <option value="K">K</option>
           </select>
         </div>
         <div class="col-sm">
           <select class="form-select text-center" id="typeSelect">
             <option selected>Type</option>
-            <option value="1">Addition</option>
-            <option value="2">Subtraction</option>
-            <option value="3">Multiplication</option>
-            <option value="3">Division</option>
+            <option value="Addition">Addition</option>
+            <option value="Subtraction">Subtraction</option>
+            <option value="Multiplication">Multiplication</option>
+            <option value="Division">Division</option>
           </select>
         </div>
         
     </form>
 
-    <form class = "row g-1 justify-content-sm-around" name = "radioForm" id="radioSelect">
-      <input type="radio" class="btn-check btn-space" name="options" id="option1" autocomplete="off" checked>
-      <label class="btn btn-secondary" for="option1">Whole</label>
-
-      <input type="radio" class="btn-check btn-space" name="options" id="option2" autocomplete="off">
+    <form class = "row align-items-center " name = "radioForm" id="radioSelect">
+      <div class="col d-flex justify-content-center">
+        <input type="radio" class="btn-check btn-space" name="options" id="option1" value="Whole" autocomplete="off" checked>
+        <label class="btn btn-secondary" for="option1">Whole</label>
+      </div>
+      <div class="col d-flex justify-content-center">
+        <input type="radio" class="btn-check btn-space" name="options" id="option2" value="Fraction" autocomplete="off">
       <label class="btn btn-secondary" for="option2">Fraction</label>
-
-      <input type="radio" class="btn-check btn-space" name="options" id="option4" autocomplete="off">
+      </div>
+      <div class="col d-flex justify-content-center">
+        <input type="radio" class="btn-check btn-space" name="options" id="option4" value="Decimal" autocomplete="off">
       <label class="btn btn-secondary" for="option4">Decimal</label>
+      </div>
     </form>
 
-    <form class="row  g-2 justify-content-sm-around " name="generateForm">
-
-      
-      <!-- <div class="col-sm">
-        <div class="form-check form-switch" id="wholeSelect" checked>
-          <input class="form-check-input" type="checkbox" role="switch" id="wholeSelectSwitch">
-          <label class="form-check-label" for="flexSwitchCheckDefault"> Whole </label>
-        </div>
-      </div>
-      <div class="col-sm">
-        <div class="form-check form-switch" id="fractionSelect">
-          <input class="form-check-input" type="checkbox" role="switch" id="fractionSelectSwitch">
-          <label class="form-check-label" for="flexSwitchCheckDefault"> Fractions </label>
-        </div>
-      </div>
-      <div class="col-sm">
-        <div class="form-check form-switch" id="decimalSelect">
-          <input class="form-check-input" type="checkbox" role="switch" id="decimalSelectSwitch">
-          <label class="form-check-label" for="flexSwitchCheckDefault"> Decimals </label>
-        </div>
-      </div> -->
-
+    <form class="row justify-content-sm-around" name="generateForm">
       <div class="row text-center" id="generateButtonDiv">
         <button type="submit" name="generate" id="generateButton">Generate</button>
-      </div> 
+      </div>
     </form>
+    <p class="output">(Problem will appear here)</p>
 
     
     <!-- TODO: Modal for generate error when a selection is missing -->
@@ -106,12 +90,12 @@
       <div class="answer-box">
         <label>
           <input name="answer" placeholder="Enter instructions here" type="text"
-            value="Type Answer Here" id="answerInput">
+            value="Generate Question First" id="answerInput" disabled>
         </label>
-        <button type="submit" name="submit" id="submitButton">Submit</button>
+        <button type="submit" name="submit" id="submitButton" disabled>Submit</button>
       </div>
     </form>
-    <p class="output">(Results will appear here)</p>
+    <p class="outputCorrectness" hidden>(Results will appear here)</p>
   </main>
 
   <script type="module" src="/main.js"></script>
