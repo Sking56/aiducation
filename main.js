@@ -9,19 +9,32 @@ import * as bootstrap from 'bootstrap';
 // 🔥 https://g.co/ai/idxGetGeminiKey 🔥
 let API_KEY = import.meta.env.VITE_API_KEY;
 
-let form = document.querySelector('form[name="answerForm"]');
+let answer = document.querySelector('form[name="answerForm"]');
+let generate = document.querySelector('form[name="generateForm"]');
 let promptInput = document.querySelector('input[name="answer"]');
 let output = document.querySelector('.output');
 let gradeLevel = document.getElementById("gradeSelect");
 let problemType = document.getElementById("typeSelect");
+let wholeNumber = document.getElementById("wholeSelect");
+let fraction = document.getElementById("fractionSelect");
+let decimals = document.getElementById("decimalSelect");
 
 
 const dropdownElementList = document.querySelectorAll('.dropdown-toggle')
 const gradeDropdown = [...dropdownElementList].map(dropdownToggleEl => new bootstrap.Dropdown(dropdownToggleEl))
 
-form.onsubmit = async (ev) => {
+
+/*
+* Handle question creation
+*/
+generate.onsubmit = async (ev) => {
   ev.preventDefault();
-  output.textContent = 'Generating...';
+  //Check if grade level, type, and at least one number type is selected
+  //Otherwise show error modal
+  let gradeVal = gradeLevel.value;
+  let typeVal = problemsType.value;
+
+  output.textContent = "Generating...";
 
   try {
     //$('.dropdown-toggle').dropdown()
@@ -62,5 +75,9 @@ form.onsubmit = async (ev) => {
   }
 };
 
-// You can delete this once you've filled out an API key
-maybeShowApiKeyBanner(API_KEY);
+answer.onsubmit = async (ev) => {
+  ev.preventDefault();
+  //Check valid answer or show error modal
+
+};
+

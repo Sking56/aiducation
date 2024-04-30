@@ -10,6 +10,7 @@ body {
   background-attachment: fixed;
   background-position: 0;
   height: 100%;
+  overflow: hidden;
 }
 
 main,
@@ -176,10 +177,28 @@ button:hover {
 }
 
 #generateButtonDiv {
+  padding-top: 15px;
+}
+
+#radioSelect {
   padding-top: 10px;
 }
 
 .navbar {
   background-color: #133c75;
   $navbar-padding-y : 1rem;
+}
+
+.btn-space {
+  margin-right: 30px;
+}
+
+// .btn-check + .btn {
+//   background-color: #0d6efd;
+// }
+
+.btn-check:checked + .btn {
+  background-color: #0d6efd;
+  border-color: #0d6efd;
+  color: #fff; /* Change text color */
 }

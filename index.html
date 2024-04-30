@@ -11,12 +11,20 @@
 </head>
 
 <body>
-  <nav class="navbar navbar-dark">
+  <nav class="navbar navbar-dark navbar-expand-lg">
     <div class="container-fluid">
-      <a class="navbar-brand" href="#">
+      <a class="navbar-brand" href="/">
         <!-- <img src="" alt="Logo" width="30" height="24" class="d-inline-block align-text-top"> -->
         <h1>AIducation</h1>
       </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <div class="navbar-nav">
+          <a class="nav-link active" aria-current="page" href="/about/">About</a>
+        </div>
+      </div>
     </div>
   </nav>
   <!-- <div>
@@ -48,8 +56,22 @@
         </div>
         
     </form>
-    <form class="row  g-2 justify-content-sm-around ">
-      <div class="col-sm">
+
+    <form class = "row g-1 justify-content-sm-around" name = "radioForm" id="radioSelect">
+      <input type="radio" class="btn-check btn-space" name="options" id="option1" autocomplete="off" checked>
+      <label class="btn btn-secondary" for="option1">Whole</label>
+
+      <input type="radio" class="btn-check btn-space" name="options" id="option2" autocomplete="off">
+      <label class="btn btn-secondary" for="option2">Fraction</label>
+
+      <input type="radio" class="btn-check btn-space" name="options" id="option4" autocomplete="off">
+      <label class="btn btn-secondary" for="option4">Decimal</label>
+    </form>
+
+    <form class="row  g-2 justify-content-sm-around " name="generateForm">
+
+      
+      <!-- <div class="col-sm">
         <div class="form-check form-switch" id="wholeSelect" checked>
           <input class="form-check-input" type="checkbox" role="switch" id="wholeSelectSwitch">
           <label class="form-check-label" for="flexSwitchCheckDefault"> Whole </label>
@@ -66,23 +88,25 @@
           <input class="form-check-input" type="checkbox" role="switch" id="decimalSelectSwitch">
           <label class="form-check-label" for="flexSwitchCheckDefault"> Decimals </label>
         </div>
-      </div>
+      </div> -->
+
+      <div class="row text-center" id="generateButtonDiv">
+        <button type="submit" name="generate" id="generateButton">Generate</button>
+      </div> 
     </form>
 
-    <div class="row text-center" id="generateButtonDiv">
-      <button type="submit" name="generate" id="generateButton">Generate</button>
-    </div> 
-    <!-- TODO: Add a generate button for when the grade level and problem type is chosen -->
     
+    <!-- TODO: Modal for generate error when a selection is missing -->
 
 
-
+    <!-- TODO: Modal for answer error when input is wrong format-->
+    
     <!-- Prompt box change to answer box and submit checks if answer is valid and correct -->
     <form name="answerForm">
       <div class="answer-box">
         <label>
           <input name="answer" placeholder="Enter instructions here" type="text"
-            value="Provide a recipe for the baked goods in the image" id="answerInput">
+            value="Type Answer Here" id="answerInput">
         </label>
         <button type="submit" name="submit" id="submitButton">Submit</button>
       </div>
