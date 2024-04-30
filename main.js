@@ -7,10 +7,10 @@ import * as bootstrap from 'bootstrap';
 // 🔥 FILL THIS OUT FIRST! 🔥
 // 🔥 GET YOUR GEMINI API KEY AT 🔥
 // 🔥 https://g.co/ai/idxGetGeminiKey 🔥
-let API_KEY = fetch('api.key').then(response => response.text());
+let API_KEY = import.meta.env.VITE_API_KEY;
 
-let form = document.querySelector('form');
-let promptInput = document.querySelector('input[name="prompt"]');
+let form = document.querySelector('form[name="answerForm"]');
+let promptInput = document.querySelector('input[name="answer"]');
 let output = document.querySelector('.output');
 let gradeLevel = document.getElementById("gradeSelect");
 let problemType = document.getElementById("typeSelect");
@@ -24,7 +24,7 @@ form.onsubmit = async (ev) => {
   output.textContent = 'Generating...';
 
   try {
-    $('.dropdown-toggle').dropdown()
+    //$('.dropdown-toggle').dropdown()
     // Load the image as a base64 string
     // let imageUrl = form.elements.namedItem('chosen-image').value;
     // let imageBase64 = await fetch(imageUrl)

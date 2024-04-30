@@ -70,7 +70,7 @@
     </form>
 
     <div class="row text-center" id="generateButtonDiv">
-      <button type="submit" id="generateButton">Generate</button>
+      <button type="submit" name="generate" id="generateButton">Generate</button>
     </div> 
     <!-- TODO: Add a generate button for when the grade level and problem type is chosen -->
     
@@ -78,13 +78,13 @@
 
 
     <!-- Prompt box change to answer box and submit checks if answer is valid and correct -->
-    <form>
+    <form name="answerForm">
       <div class="answer-box">
         <label>
           <input name="answer" placeholder="Enter instructions here" type="text"
             value="Provide a recipe for the baked goods in the image" id="answerInput">
         </label>
-        <button type="submit" id="submitButton">Submit</button>
+        <button type="submit" name="submit" id="submitButton">Submit</button>
       </div>
     </form>
     <p class="output">(Results will appear here)</p>
