@@ -14,7 +14,6 @@ let generate = document.querySelector('form[name="generateForm"]');
 let output = document.querySelector('.output');
 let correct = document.querySelector('.outputCorrectness')
 
-
 /*
 * Handle question creation
 */

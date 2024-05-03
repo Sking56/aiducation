@@ -1,6 +1,7 @@
 # AIducation
 
 ### By Samuel Chen and Erica Lee
+### [Demo Link](https://9000-monospace-aiducation-1714198325794.cluster-t23zgfo255e32uuvburngnfnn4.cloudworkstations.dev/?monospaceUid=633155)
 
 ## Inspiration
 
