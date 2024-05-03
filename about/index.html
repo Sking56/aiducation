@@ -9,21 +9,56 @@
       <title>About AIducation</title>
   </head>
   <body>
-      <nav class="navbar navbar-dark navbar-expand-lg">
-          <div class="container-fluid">
-            <a class="navbar-brand" href="/">
-              <!-- <img src="" alt="Logo" width="30" height="24" class="d-inline-block align-text-top"> -->
-              <h1>AIducation</h1>
-            </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-              <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-              <div class="navbar-nav">
-                <a class="nav-link active" aria-current="page" href="/about/">About</a>
-              </div>
+    <header>
+      <nav class="navbar navbar-dark navbar-expand-lg fixed-top">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="/">
+            <!-- <img src="" alt="Logo" width="30" height="24" class="d-inline-block align-text-top"> -->
+            <h1>AIducation</h1>
+          </a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div class="navbar-nav">
+              <a class="nav-link active" aria-current="page" href="/about/">About</a>
             </div>
           </div>
-        </nav>
+        </div>
+      </nav>
+    </header>
+    <main class="container-fluid" data-bs-spy="scroll" data-bs-target=".about-section-list">
+      <div class="row">
+        <div class="col-3 d-flex justify-content-center">
+          <nav id="about-content-navbar" class="h-100 flex-column align-items-stretch pe-4">
+            <nav class="nav nav-pills flex-column dark">
+              <a class="nav-link" href="#item-1">About Us</a>
+              <a class="nav-link" href="#item-2">Inspiration</a>
+              <a class="nav-link" href="#item-3">What's Next</a>
+            </nav>
+          </nav>
+        </div>
+        <div class="col-8">
+          <div data-bs-spy="scroll" data-bs-target="#simple-list-example" data-bs-offset="0" data-bs-smooth-scroll="true" class="scrollspy-content" tabindex="0">
+            <div class="page">
+              <h4 id="item-1">About Us</h4>
+              <hr>
+              <p>Our AIducation platform is designed for students in grades K-5 to practice math skills. Users can customize their practice session by selecting the grade level (K-5), the type of math problem (addition, subtraction, multiplication, or division), and the numerical format (whole numbers, fractions, or decimals). Based on these preferences, Gemini, our AI system, generates a math problem for the student to solve. After the student submits their answer, Gemini verifies it and provides an explanation as needed.</p>
+            </div>
+            <div class="page">
+              <h4 id="item-2">Our Inspiration</h4>
+              <hr>
+            <p>During our childhood, we utilized educational resources such as Kumon and Khan Academy to learn mathematics. While these platforms offered valuable instruction, they sometimes fell short in providing sufficient practice problems and clear explanations. Recognizing the potential of AI, we envisioned a solution that could generate unlimited practice problems accompanied by detailed explanations to enhance students' learning experiences.</p>
+            </div> 
+            <div class="page">
+              <h4 id="item-3">Future Work</h4>
+              <hr>
+              <p>...</p>
+            </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
   </body>
 </html>

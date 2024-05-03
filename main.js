@@ -75,12 +75,13 @@ generate.onsubmit = async (ev) => {
 answer.onsubmit = async (ev) => {
   ev.preventDefault();
   //Check valid answer or show error modal
+  correct.hidden = false;
   let answerInput = document.getElementById("answerInput");
   let answerText = answerInput.value;
 
   try {
     // Assemble the prompt by combining the text
-    let prompt = "Is {" + answerText + "} a valid answer for the question " + output.innerHTML + "?";
+    let prompt = "Is {" + answerText + "} a valid answer for the question " + output.innerHTML + "? and explain why or why not";
 
     // Call the gemini-pro-vision model, and get a stream of results
     const genAI = new GoogleGenerativeAI(API_KEY);
