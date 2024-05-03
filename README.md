@@ -29,7 +29,6 @@ We built this web application using ViteJS, Bootstrap, and Google’s Gemini API
 
 - Making a more accurate way to create and verify problems.
     - We can create our own numbers and verify them. This way we do not have to rely on Gemini to verify the answer.
-    - We want to be able to create problems and limit
     - Optimizing input to the Gemini API to create more sensible word problems and explanations.
 - Inserting visual representation for problems and explanations using image generation.
 - Expanding the scope and range of problems.
