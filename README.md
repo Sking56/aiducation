@@ -4,6 +4,8 @@
 
 ### [Demo Link](https://aiducation-59c85.web.app)
 
+### [Submission Link](https://devpost.com/software/aiducation-3iupnh)
+
 ## Inspiration
 
 During our childhood, we utilized educational resources such as Kumon and Khan Academy to learn mathematics. While these platforms offered valuable instruction, they sometimes fell short in providing sufficient practice problems and clear explanations. Recognizing the potential of AI, we envisioned a solution that could generate unlimited practice problems accompanied by detailed explanations to enhance students' learning experiences.

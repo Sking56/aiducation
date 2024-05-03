@@ -31,10 +31,14 @@ generate.onsubmit = async (ev) => {
   //Otherwise show error modal
   if (gradeVal === "Grade Level" || problemVal === "Type") {
     output.innerHTML = "Please select a grade level and problem type";
+    document.getElementById("answerInput").disabled = true;
+    document.getElementById("submitButton").disabled = true;
     return;
   }else{
     document.getElementById("answerInput").disabled = false;
+    document.getElementById("answerInput").value = "";
     document.getElementById("submitButton").disabled = false;
+    correct.innerHTML = "";
   }
 
   // output.textContent = numberVal;
@@ -80,7 +84,7 @@ answer.onsubmit = async (ev) => {
 
   try {
     // Assemble the prompt by combining the text
-    let prompt = "Is {" + answerText + "} a valid answer for the question " + output.innerHTML + "? and explain why or why not";
+    let prompt = "Is " + answerText + " a correct answer for the question " + output.innerHTML + "? and explain why or why not";
 
     // Call the gemini-pro-vision model, and get a stream of results
     const genAI = new GoogleGenerativeAI(API_KEY);
